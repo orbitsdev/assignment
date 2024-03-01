@@ -86,17 +86,55 @@ include('../backend/preventaccess/is_not_login.php');
         .logout-btn:hover {
             background-color: #0056b3;
         }
+
+		.header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-details {
+    display: flex;
+    align-items: center;
+}
+
+.user-details .user-name {
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.logout-btn-container {
+    margin-left: auto;
+}
+
+.logout-btn {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.logout-btn:hover {
+    color: #f0f0f0;
+}
+
     </style>
 </head>
 <body>
 
 		<?php
-		      include('../backend/database/connection_indicator.php');
+		      include('../backend/database/config.php');
+			  include('navigation.php'); 
 		?>
 
+	
 	<div class="container">
 		<div class="btn-card" >
-		<button class="logout-btn" onclick="location.href='../backend/forms/logout.php';">Logout</button>
 
 		</div>
         <div class="card">
